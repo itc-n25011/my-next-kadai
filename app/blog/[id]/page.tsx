@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { client } from '@/lib/client';
-import { Blog } from '@/types/blog';
+import { client } from '@/libs/client';
+import { Blog } from '@/type/blog';
 import styles from './page.module.css';
 
 export default async function Home() {
