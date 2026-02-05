@@ -1,0 +1,34 @@
+/* 記事本文のコンテナ */
+.articleBody {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #333;
+}
+
+/* 記事内の見出し（H2）をオリックス仕様に */
+.articleBody h2 {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 3rem 0 1.5rem;
+  border-left: 6px solid #00234b; /* ネイビー */
+  background: #f8f8f8;
+}
+
+.articleBody h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #b3a169; /* ゴールド */
+}
+
+/* 引用文のスタイル（分析記事で重要） */
+.articleBody blockquote {
+  border-left: 4px solid #ccc;
+  padding: 10px 20px;
+  color: #666;
+  font-style: italic;
+  background: #fafafa;
+}
