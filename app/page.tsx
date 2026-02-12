@@ -1,34 +1,34 @@
-// app/page.tsx
-import Link from 'next/link';
-import { client } from '../libs/client'; 
-import type { Post } from '../type/blog'; // 「type」を追加するとより安全です
-import styles from './page.module.css';
+import Link from "next/link";
 
-// ...（以下のコードはそのまま）
-
-export default async function Home() {
-  // microCMSから記事一覧を取得
-  const data = await client.get({ 
-    endpoint: 'blogs',
-    queries: { fields: 'id,title,publishedAt' } 
-  });
-  const posts: Post[] = data.contents;
-
+export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>ORIX Buffaloes Insight</h1>
-      <div className={styles.grid}>
-        {posts.map((post) => (
-          <article key={post.id} className={styles.card}>
-            <Link href={`/blog/${post.id}`}>
-              <time className={styles.date}>
-                {new Date(post.publishedAt).toLocaleDateString()}
-              </time>
-              <h2 className={styles.postTitle}>{post.title}</h2>
-            </Link>
-          </article>
-        ))}
-      </div>
+    <main style={{ 
+      display: "flex", 
+      flexDirection: "column", 
+      alignItems: "center", 
+      justifyContent: "center", 
+      height: "100vh",
+      textAlign: "center" 
+    }}>
+      <h1 style={{ fontSize: "32px", marginBottom: "20px" }}>
+        オリックス応援ブログへようこそ！
+      </h1>
+      <p style={{ marginBottom: "30px", color: "#666" }}>
+        最新の選手レポートをチェックしましょう。
+      </p>
+      
+      {/* 💡 ここから一覧ページへ飛べるようにします */}
+      <Link href="/players" style={{
+        padding: "15px 30px",
+        backgroundColor: "#0070f3",
+        color: "white",
+        borderRadius: "8px",
+        textDecoration: "none",
+        fontSize: "18px",
+        fontWeight: "bold"
+      }}>
+        選手一覧を見る
+      </Link>
     </main>
   );
 }

@@ -1,12 +1,17 @@
+// type/blog.ts
 export type Blog = {
   id: string;
   title: string;
   content: string;
-  eyecatch?: { url: string };
+  eyecatch?: {
+    url: string;
+  };
   publishedAt: string;
+  // 👇 ここに report を追加しました！
+  report?: string;
 };
 
-// type/blog.ts
+// Post型も使っている場合は、こちらにも追加しておくと安心です
 export type Post = {
   id: string;
   title: string;
@@ -15,4 +20,5 @@ export type Post = {
   eyecatch?: {
     url: string;
   };
+  report?: string;
 };

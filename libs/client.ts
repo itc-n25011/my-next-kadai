@@ -1,6 +1,7 @@
 import { createClient } from 'microcms-js-sdk';
 
 export const client = createClient({
-  serviceDomain: 'orix-insight', // 画像で確認したドメイン
-  apiKey: 'LbhNOEgUYAeulGGJiyR1iGYxBHPxDAQFn1Co', // 提供いただいたAPIキー
+  // 👈 ここを microCMS の管理画面（image_dd9d1f.png）の値に更新します
+  serviceDomain: 'orix-insight', 
+  apiKey: 'LbhNOEgUYAeulGGJiyR1iGYxBHPxDAQFn1Co', 
 });

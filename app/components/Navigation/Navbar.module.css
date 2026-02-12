@@ -1,0 +1,45 @@
+/* components/Navbar.module.css */
+.nav {
+  background-color: #001529; /* オリックスネイビー */
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #b3a25d; /* ゴールドのアクセント */
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span { color: #b3a25d; }
+
+.links { display: flex; gap: 30px; }
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.link:hover { color: #b3a25d; }
